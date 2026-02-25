@@ -114,7 +114,7 @@
 }
 
 .cat-little {
-  filter: brightness(200%);
+  filter: brightness(200%) saturate(200%) contrast(50%);
 }
 
 .cat-upset {
