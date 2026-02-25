@@ -67,7 +67,7 @@
 }
 
 .card__title {
-  font-weight: 715;
+  font-variation-settings: 'wght' 715;
   font-size: inherit;
   line-height: 100%;
   padding: 5px 10px;
@@ -92,7 +92,7 @@
 .watermark {
   font-family: var(--accent-font);
   font-size: 14px;
-  font-weight: 400;
+  font-variation-settings: 'wght' 400;
   color: currentColor;
   text-transform: uppercase;
   position: absolute;
