@@ -42,6 +42,10 @@
   gap: 20px;
 }
 
+.header__hero-title:focus {
+  outline: none;
+}
+
 .header__hero-title {
   font-size: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
 }
@@ -53,7 +57,7 @@
 .main {
   inline-size: var(--page-width);
   display: grid;
-  gap: 51px;
+  gap: 50px;
 }
 
 .card {
@@ -67,9 +71,9 @@
 }
 
 .card__title {
-  font-variation-settings: 'wght' 715;
+  font-variation-settings: "wght" var(--main-font-title-wght) "slnt"
+    var(--main-text-slnt);
   font-size: inherit;
-  line-height: 100%;
   padding: 5px 10px;
 }
 
@@ -84,15 +88,15 @@
 .card__image {
   display: block;
   object-fit: cover;
+  object-position: center;
   inline-size: 100%;
   block-size: 100%;
   aspect-ratio: 1 / 1;
 }
 
 .watermark {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
   font-size: 14px;
-  font-variation-settings: 'wght' 400;
   color: currentColor;
   text-transform: uppercase;
   position: absolute;
@@ -113,48 +117,51 @@
   }
 }
 
-.cat-little {
+.filter-brightness-contrast-saturate {
   filter: brightness(200%) saturate(200%) contrast(50%);
 }
 
-.cat-upset {
+.filter-grayscale {
   filter: grayscale(100%);
 }
 
-.cat-coffee {
+.filter-contrast {
   filter: contrast(200%);
 }
 
-.cat-angry {
+.filter-invert {
   filter: invert(100%);
 }
 
-.cat-together {
+.filter-sepia {
   filter: sepia(50%);
 }
 
-.cat-new-year {
+.filter-saturate {
   filter: saturate(150%);
 }
 
-.cat-green {
+.filter-blur {
   filter: blur(5px);
 }
 
-.cat-magic {
+.filter-hue-rotate {
   filter: hue-rotate(90deg);
 }
 
 .card__descripton {
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: "wght" var(--main-font-text-wght);
+  font-size: 18px;
   line-height: 21px;
-  display: grid;
-  gap: 25px;
-  margin: 30px 25px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  margin: 25px 25px 0;
 }
 
 .card__like-container {
   display: flex;
-  align-items: center;
   justify-content: end;
   gap: 7px;
   margin: 25px;
@@ -194,6 +201,29 @@
 .button:focus {
   outline: none;
   box-shadow: 2px 2px var(--accent-color);
+}
+
+@supports (mix-blend-mode: hard-light) {
+  .button .button__text {
+    transition: none;
+  }
+
+  .button svg {
+    transition: none;
+    mix-blend-mode: hard-light;
+  }
+
+  .button:hover .button__text {
+    color: var(--button-hover-text);
+  }
+
+  .button:hover svg {
+    color: var(--button-hover-text);
+  }
+
+  .button__text {
+    mix-blend-mode: hard-light;
+  }
 }
 
 .like-icon {
@@ -272,10 +302,6 @@
   animation: sparks-flash 0.3s ease-in 0.3s 1 forwards;
 }
 
-.card__like-button {
-  padding: 6px 35px;
-}
-
 .card__icon-button {
   cursor: pointer;
   background-color: transparent;
@@ -283,6 +309,7 @@
   block-size: 38px;
   border: 2px solid transparent;
   padding: 0;
+  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -294,11 +321,20 @@
   box-shadow: none;
 }
 
+.card__like-button {
+  inline-size: 130px;
+  block-size: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 .button__text {
-  font-family: var(--accent-font);
+  font-family: var(--accent-font), fantasy;
+  font-weight: var(--accent-font-wght);
   font-size: 14px;
   line-height: 90%;
-  font-weight: 400;
 }
 
 .button__save {
@@ -306,6 +342,7 @@
   block-size: 55px;
   justify-self: center;
   margin-block-end: 100px;
+  cursor: pointer;
 }
 
 .button__save-image {
@@ -315,8 +352,8 @@
 }
 
 .dialog {
-  font-family: var(--accent-font);
-  font-weight: 400;
+  font-family: var(--accent-font), fantasy;
+  font-weight: var(--accent-font-wght);
   line-height: 150%;
   font-size: 14px;
   text-transform: uppercase;
@@ -342,11 +379,12 @@
   grid-row: 2;
   grid-column: span 2;
   padding: 12.5px clamp(7.281rem, 6.929rem + 1.502vw, 8.281rem);
+  cursor: pointer;
 }
 
 @media (width <= 375px) {
   .card:first-child .card__descripton {
-    margin-block-start: 35px;
+    margin-block-start: 27px;
   }
 
   .button__save {
@@ -362,5 +400,9 @@
     inline-size: 28px;
     block-size: 28px;
     margin-inline-end: 0;
+  }
+
+  .dialog {
+    padding: 30px 40px;
   }
 }

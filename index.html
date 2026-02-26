@@ -16,18 +16,18 @@
   <body class="page">
     <header class="header">
       <div class="header__title">
-        <h1 class="header__hero-title">&lt;/html&gt;</h1>
-        <h2 class="header__subtitle">закрывающий тег</h2>
+        <a class="header__hero-title">&lt;/html&gt;</a>
+        <h1 class="header__subtitle">закрывающий тег</h1>
       </div>
     </header>
     <main class="main">
       <article class="card">
-        <h3 class="card__title">
+        <h2 class="card__title">
           Фритрек и нулевой спринт: Подготовка к работе
-        </h3>
+        </h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-little"
+            class="card__image filter-brightness-contrast-saturate"
             src="./images/cat-little.jpeg"
             alt="Котик со спокойным лицом."
           />
@@ -42,8 +42,8 @@
           <p class="card__text">Я совсем малыш и ничего не знаю🙈</p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -68,16 +68,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">1 спринт: Я — чистый лист</h3>
+        <h2 class="card__title">1 спринт: Я — чистый лист</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-upset"
+            class="card__image filter-grayscale"
             src="./images/cat-upset.jpeg"
             alt="Котик расстроен, плачет и смотрит в камеру."
           />
@@ -96,8 +96,8 @@
           </p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -122,16 +122,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">1 спринт: А если не получится?</h3>
+        <h2 class="card__title">1 спринт: А если не получится?</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-coffee"
+            class="card__image filter-contrast"
             src="./images/cat-coffee.jpeg"
             alt="Котик с кофе, мордочка расслаблена."
           />
@@ -148,8 +148,8 @@
           </p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -174,16 +174,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">2 спринт: Погоня за идеалом</h3>
+        <h2 class="card__title">2 спринт: Погоня за идеалом</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-angry"
+            class="card__image filter-invert"
             src="./images/cat-angry.jpeg"
             alt="Котик поднял лопатку для котлет и с яростью смотрит в камеру."
           />
@@ -202,8 +202,8 @@
           </p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -228,16 +228,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">2 спринт: О тех, кто рядом</h3>
+        <h2 class="card__title">2 спринт: О тех, кто рядом</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-together"
+            class="card__image filter-sepia"
             src="./images/cat-together.jpeg"
             alt="Два котика сидят обнимаются, на мордочках счастливые улыбки."
           />
@@ -245,7 +245,7 @@
         </div>
         <div class="card__descripton">
           <p class="card__text">
-            Всё это время вы были не одиноки (хотя, возможно, иногда и
+            Всё это время вы были не одиноки (хотя, возможно, иногда и&nbsp;
             чувствовали, что одни против целого мира). Вас окружали
             одногруппники, команда сопровождения и просто близкие люди, которым
             можно пожаловаться, если очередной макет просто так не поддавался.
@@ -255,8 +255,8 @@
           <p class="card__text">Благодаря моим близким я полна решимости❤️</p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -281,16 +281,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">3 спринт: Обходные стратегии</h3>
+        <h2 class="card__title">3 спринт: Обходные стратегии</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-new-year"
+            class="card__image filter-saturate"
             src="./images/cat-ny.jpeg"
             alt="Котик с бутылкой шампанского, празднует Новый Год."
           />
@@ -305,8 +305,8 @@
           <p class="card__text">Этот спринт начался уже в новом году🎄</p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -331,16 +331,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">3 спринт: Когда опускаются руки</h3>
+        <h2 class="card__title">3 спринт: Когда опускаются руки</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-green"
+            class="card__image filter-blur"
             src="./images/cat-green.jpeg"
             alt="Котик зеленого цвета, похож на пришельца."
           />
@@ -357,8 +357,8 @@
           <p class="card__text">Мне очень помогла самоцисциплина👩🏻‍💻</p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -383,16 +383,16 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
       <article class="card">
-        <h3 class="card__title">«Сейчас я здесь»</h3>
+        <h2 class="card__title">«Сейчас я здесь»</h2>
         <div class="card__image-container">
           <img
-            class="card__image cat-magic"
+            class="card__image filter-hue-rotate"
             src="./images/cat-magic.jpeg"
             alt="Котик надел костюм волшебника и держит в руках волшебную палочку."
           />
@@ -402,10 +402,10 @@
           <p class="card__text">
             Сейчас вы уже очень много знаете о вёрстке. Но это только начало.
             Во-первых, впереди ещё много материала про «красотищу». Во-вторых, с
-            окончанием курса учёба не заканчивается. Вёрстка — это целый мир. И
-            этот мир постоянно меняется. Познать его полностью не получится, но
-            это тот случай, когда важен сам процесс познания. Ведь часто путь —
-            и есть результат.
+            окончанием курса учёба не заканчивается. Вёрстка — это&nbsp; целый
+            мир. И этот мир постоянно меняется. Познать его полностью
+            не&nbsp;получится, но это тот случай, когда важен сам процесс
+            познания. Ведь&nbsp;часто путь — и есть результат.
           </p>
           <p class="card__text">
             Я чувствую, что своими руками я творю магию, и очень горжусь
@@ -413,8 +413,8 @@
           </p>
         </div>
         <div class="card__like-container">
-          <button class="card__icon-button">
-            <svg class="like-icon" viewBox="0 0 39 39">
+          <button type="button" class="card__icon-button">
+            <svg class="like-icon" viewBox="0 0 39 39" aria-hidden="true">
               <g class="heart">
                 <path
                   class="contour"
@@ -438,7 +438,7 @@
               />
             </svg>
           </button>
-          <button class="button card__like-button">
+          <button type="button" class="button card__like-button">
             <span class="button__text">Like</span>
           </button>
         </div>
@@ -454,6 +454,7 @@
           width="21"
           height="21"
           viewBox="0 0 39 39"
+          aria-hidden="true"
         >
           <use href="./svg/floopy.svg#floopy"></use>
         </svg>
@@ -466,6 +467,7 @@
             width="39"
             height="39"
             viewBox="0 0 39 39"
+            aria-hidden="true"
           >
             <use href="./svg/floopy.svg#floopy"></use>
           </svg>
