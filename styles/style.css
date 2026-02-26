@@ -171,16 +171,11 @@
   border: var(--border);
   background-color: #fff;
   cursor: pointer;
-  transition:
-    box-shadow 0.3s ease,
-    color 0.5s ease-in-out;
+  transition: box-shadow 0.3s ease;
+    /* color 0.5s ease-in-out; */
   position: relative;
   overflow: hidden;
   z-index: 0;
-}
-
-.button:hover {
-  color: white;
 }
 
 .button::before {
@@ -189,7 +184,6 @@
   inset: 0;
   background-color: var(--accent-color);
   z-index: -1;
-
   transform: translateX(-100%);
   transition: transform 0.5s ease-in-out;
 }
@@ -198,32 +192,24 @@
   transform: translateX(0);
 }
 
-.button:focus {
-  outline: none;
-  box-shadow: 2px 2px var(--accent-color);
-}
-
-@supports (mix-blend-mode: hard-light) {
-  .button .button__text {
-    transition: none;
+@supports (mix-blend-mode: difference) {
+  .button__text {
+    position: relative;
+    z-index: 1;
+    color: #fff;              
+    mix-blend-mode: difference;
   }
 
   .button svg {
-    transition: none;
-    mix-blend-mode: hard-light;
+    position: relative;
+    z-index: 1;
+    mix-blend-mode: difference;
   }
+}
 
-  .button:hover .button__text {
-    color: var(--button-hover-text);
-  }
-
-  .button:hover svg {
-    color: var(--button-hover-text);
-  }
-
-  .button__text {
-    mix-blend-mode: hard-light;
-  }
+.button:focus {
+  outline: none;
+  box-shadow: 2px 2px var(--accent-color);
 }
 
 .like-icon {
@@ -335,6 +321,7 @@
   font-weight: var(--accent-font-wght);
   font-size: 14px;
   line-height: 90%;
+  mix-blend-mode: difference;
 }
 
 .button__save {
