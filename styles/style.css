@@ -203,6 +203,7 @@
   .button svg {
     position: relative;
     z-index: 1;
+    color: #fff;
     mix-blend-mode: difference;
   }
 }
