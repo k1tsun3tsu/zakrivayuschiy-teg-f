@@ -196,7 +196,7 @@
   .button__text {
     position: relative;
     z-index: 1;
-    color: #fff;              
+    color: #fff;
     mix-blend-mode: difference;
   }
 
@@ -296,7 +296,6 @@
   block-size: 38px;
   border: 2px solid transparent;
   padding: 0;
-  cursor: pointer;
 }
 
 .card__icon-button:focus {
@@ -322,7 +321,6 @@
   font-weight: var(--accent-font-wght);
   font-size: 14px;
   line-height: 90%;
-  mix-blend-mode: difference;
 }
 
 .button__save {
